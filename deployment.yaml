@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-assignment-3-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloud-assignment-3
+  template:
+    metadata:
+      labels:
+        app: cloud-assignment-3
+    spec:
+      containers:
+      - name: cloud-assignment-3-container
+        image: calatop
+        imagePullPolicy: IfNotPresent
